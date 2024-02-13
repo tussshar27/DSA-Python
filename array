@@ -1,1 +1,68 @@
 refer doc: https://www.freecodecamp.org/news/python-array-tutorial-define-index-methods/
+1. list and array are both similiar to each other. Both are mutable menas they can expand or shrink in size. Also both are fast in performance.
+2. The main difference between list and array is, array stores data of only single data type where as list can store data of multiple data types.
+3. unlike list, array is not built-in data structure. so to use array, we have to import array module..
+
+4. There are three ways to import an array:
+method 1:
+import array
+array.array()
+
+method 2:
+import array as arr
+arr.array()
+
+method 3:
+from array import *
+array()
+
+5.Now after importing an array, we have to define it.
+Syntax:
+variable_name = array(typecode,[element])
+
+Typecode:
+TYPECODE	C TYPE	PYTHON TYPE	SIZE
+'b'	signed char	int	1
+'B'	unsigned char	int	1
+'u'	wchar_t	Unicode character	2
+'h'	signed short	int	2
+'H'	unsigned short	int	2
+'i'	signed int	int	2
+'I'	unsigned int	int	2
+'l'	signed long	int	4
+'L'	unsigned long	int	4
+'q'	signed long long	int	8
+'Q'	unsigned long long	int	8
+'f'	float	float	4
+'d'	double	float	8
+
+Signed integer means that the array can include positive and negative values. Unsigned integer, with H for example, would mean that no negative values are allowed.
+
+To create integer array:
+arr1 = array(i,[1,2,3,4,5,6,7])
+
+6. Array Example:
+import array as arr
+arr1 = arr.array(i,[1,2,3,4,5,6,7])
+print(arr1)
+
+To find the length of an array:
+print(len(arr1))
+
+7. Indexing of array and how to access individual items in an array.
+indexing in python starts at 0.
+Each item in an array has a specific address.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
