@@ -64,6 +64,116 @@ d2['m4'] = ['a1','b1','c1']
 print(d2)
 o/p:
 {'m1':23,'m2':43,'m3':[2,3,4],'m4':['a1','b1','c1']}
+print(d2['m4'][0])
+o/p:
+a1
+#creating new dictionary.
+d3 ={}
+d3[1] = 10
+d3[2] = 20
+d3[3] = 30
+print(d3)
+#nested dictionary
+d4 = {1:10,2:20,3:30,4:{10:'hey',20:'hii'}}
+
+#for in loop using dictionary:
+for i in d4.keys():
+  print(i)
+o/p:
+1
+2
+3
+4
+for j in d4.values():
+  print(j)
+o/p:
+10
+20
+30
+{10:'hey',20:'hii'}
+for key,value in d4.items():
+  print(f'key:{key} , value:{value})
+o/p:
+key:... , value:...
+#to create dictionary copy
+d5 = d4.copy()
+#to clear dictionary
+d4.clear()
+#to get value from key
+d4.get(1)
+o/p:10
+print(d4.items())
+print(d4.keys())
+print(d4.values())
+#removing key and its value from dictionary
+d4.pop(1)  --passing key
+#to remove last key-value pair
+d4.popitem()
+#to update existing data
+d4.update({2:24})
+
+4. Sets
+--unordered, only unique values are stored , can store multiple data types
+#converting list to set
+l1 = [1,2,2,2,3,3,4,4,4,6]
+s1 = set(l1)
+print(s1)
+o/p:
+{1,2,3,4,6}
+#creating new set
+s2 = set()
+s2.add(10)
+s2.add(20)
+s2.add(30)
+print(s2)
+o/p:
+{10,20,30}
+#removing value
+s2.remove(20)
+print(s2)
+o/p:
+{10,30}
+
+5. Tuple
+--it is similar to list
+--the main difference between both are, lists are changeable where as tuples are not.
+t1 = (1,2,3,4,'tushar')
+#to insert a new value in existing tuple, 
+#there is only one way i.e to overwrite the tuple.
+t1 = (23,45,67,"abfg",'Tushar','Annam')
+t1
+print(t1[0])
+23
+
+6. if ... elif ... else block
+a=10
+b=20
+if(a<b):
+  print(f'{a} is less than {b})
+elif(a>b):
+  print(f'{a} is greater than {b})
+else:
+  print(f'{a} is equal to {b})
+
+7. while loop
+a=1
+while(a<5):
+  print(a)
+  a+=1
+o/p:
+1
+2
+3
+4
+
+
+
+
+
+
+
+
+
 
 
 
