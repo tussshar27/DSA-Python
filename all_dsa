@@ -1,0 +1,47 @@
+1. arrays
+--stores only single data type, mutable , allow duplicates
+--import package bc its not a built-in data structure.
+import array as arr
+a1 = arr.array(i,[1,2,3,4])
+a1.append(5)  --only single element can be inserted at the end
+a1.extend(6,7,8)  --to insert multiple elements at the end.
+a1.insert(0,13)  --to insert at specific index.
+print(a1)
+print(type(a1))  --array list
+o/p:
+array(i,[13,2,3,4,5,6,7,8])
+
+--nupmy package is used for creating multidimensional array.
+import numpy as np
+a2 = np.array([1,2,3], [4,5,6],[7,8,9])
+print(a2)
+print(type(a2))  --numpy array
+
+2. lists  --can store multiple data types
+--stores ony multiple data types, mutable , allow duplicates
+--like array, no need to import any package.
+--can be nested
+l1 = [1,2,3,4,'Tushar',[5,6,7]]
+print(l1)
+print(len(l1))
+l1.append(24)
+l1.append([12,23,34])
+l1.extend([2,3,4])
+l1.insert(0,44)
+print(l1)
+o/p:
+[44,2,3,4,'Tushar',[5,6,7],24,[12,23,34],2,3,4]
+print(l1[1:4])
+o/p:
+[2,3,4]
+print(l1[-1])
+o/p:
+[4]
+print(l1[2:7:2])
+o/p:
+[3,'Tushar',24]
+
+3. Dictionary
+
+
+
