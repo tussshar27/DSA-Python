@@ -166,10 +166,28 @@ o/p:
 3
 4
 
+7. 
+list1 = ['tushar', 'aman', 'neo', 'pawan']
+list2=[]
+for i in list1:
+  list2.append("Hello: " + i)
+print(list2)
 
+8. exception handling:
+#try - except block
+try:
+  x = 1/0
+except Exception as e:
+  print(e)
 
-
-
+try:
+  x = 1/0
+except ZeroDivisionError:
+  print('divided by zero error occured.')
+else:
+  print('executed only when exception is not captured')
+finally:
+  print('it will execute mandatorily')
 
 
 
