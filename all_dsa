@@ -34,6 +34,12 @@ o/p:
 l1.remove(4)
 o/p:
 [44,2,3,'Tushar',[5,6,7],24,[12,23,34],2,3,4]
+k = sorted(l1)
+print(k)
+o/p: sorted array will get formed.
+for ind,val in enumerate(l1):
+  print(ind,val)
+o/p: enumerate is used to print value with its index number.
 print(l1[1:4])
 o/p:
 [2,3,4]
