@@ -1,5 +1,5 @@
 1. arrays
---ordered means can be accessed using index , stores only single data type, mutable , allow duplicates
+--ordered means can be accessed using index , stores only single data type, mutable(changeable) , allow duplicates
 --import package bc its not a built-in data structure.
 import array as arr
 a1 = arr.array(i,[1,2,3,4])
