@@ -1,0 +1,217 @@
+#python
+
+#Array
+import array as arr
+a1 = arr.array(i,[1,2,3,4])			#i means integer
+a1.append(10)
+a1.extend(20,30,40)
+a1.insert(0,50)
+print(a1)
+o/p:
+array(i,[1,2,3,4,10,20,30,40])
+
+#numpy package is used to create multidimensional array
+import numpy as np
+a2 = np.array(i,[1,2,3,4],[5,6,7,8])
+print(a2)
+
+#List
+l1 = [1,2,3,'hey',5.24,[10,20,30]]
+l1.append(54)
+l1.append([4,5,6])					#append always consider a single value
+l1.extend(7,8,9)
+l1.insert(0,27)
+print(len(l1))
+print(l1)
+[27,1,2,3,'hey',5.24,[10,20,30],54,[4,5,6],7,8,9]
+l1.remove(54)						#pass value inside remove()
+o/p:
+[27,1,2,3,'hey',5.24,[10,20,30],[4,5,6],7,8,9]
+for ind,val in enumerate(l1):                   #enumerate is used with list.
+    print(ind,val)
+o/p:
+0 1
+1 2
+2 3
+3 4.56
+4 hello
+5 [34, 45, 56]
+#changing index
+for ind,val in enumerate(l1,100):
+    print(ind,val)
+o/p:
+100 1
+200 2
+300 3
+400 4.56
+500 hello
+600 [34, 45, 56]
+#enumerate for string
+s1 = "geek"
+for i in enumerate(s1):
+    print(i)
+o/p:
+(0, 'g')
+(1, 'e')
+(2, 'e')
+(3, 'k')
+for i,j in enumerate(s1):
+    print(i,j)
+o/p:
+0 g
+1 e
+2 e
+3 k
+print(l1[0:4])			#[1, 2, 3, 4.56]
+print(l1[-1])			#9
+
+#Dictionary				#keys should be unique but values can be duplicate
+# NOTE: TO create dictionary, we use {} braces 
+# while to access the value of a key, we use [] just like list.
+d1 = {1:10,2:20,'i':45,5:23,6:'xyz',7:[1,2,3]}
+print(d1[2])				#20
+print(d1)					#{1: 10, 2: 20, 'i': 45, 5: 23, 6: 'xyz',7:[1,2,3]}
+d1[2] = d1[2]-10			#10
+print(d1[7][0])				#1				#accessing the list present inside dictionary
+d1[8] = ['a','b','c']		#appending new key and value to existing dictionary
+print(d1)					#{1: 10, 2: 20, 'i': 45, 5: 23, 6: 'xyz', 7: [1, 2, 3], 8: ['a', 'b', 'c']}
+print(d1[8][0])				#a
+d2[5] = 100
+d2[10] = 200
+print(d2)					#{5: 100, 10: 200}
+for i in d2.keys():
+    print(i)
+o/p:
+5
+10
+for j in d2.values():
+    print(j)
+o/p:
+100
+200
+for i,j in d2.items():
+    print(i,j)
+    print(f'keys:{i} and values:{j}')           
+o/p:
+5 100
+10 200
+keys:10 and values:200
+print(d2)                           #{5: 100, 10: 200}
+print(d2.get(5))                    #100
+d3 = d2.copy()                      #copy of dictionary
+d3.clear()                          #clear data of dictionary
+print(d2.keys())                    #dict_keys([5, 10])
+print(d2.values())                  #dict_values([100, 200])
+print(d2.items())                   #dict_items([(5, 100), (10, 200)])
+d2.pop(10)                          #passing key to remove key and its value
+print(d2)                           #{5: 100}
+d2.popitem()                        #it will remove last key and its value
+print(d2)
+d2.update({5:500})                  #updating key and its value
+print(d2)                           #{5: 100}
+
+#Sets
+#only unique values are stored.
+s1 = set()
+print(s1)
+l1 = [1,1,1,2,2,3,4,4,5]
+s2 = set(l1)
+print(s1)                           #{1, 2, 3, 4, 5}
+s1.add(10)
+s1.add(20)
+s1.add(30)
+print(s1)                           #{10, 20, 30}
+s1.remove(20)
+print(s1)                           #{10, 30}
+
+#Tuple
+#it is similar to list
+#the main difference between both are, lists are changeable where as tuples are not.
+t1 = (1,2,3,4,5.67,[1,2,3])
+print(t1)                           #(1, 2, 3, 4, 5.67,[1,2,3])
+#to insert a new value in existing tuple, 
+#there is only one way i.e to overwrite the tuple.
+t1 = (10,100,20,200,30,300,40)
+print(t1)                           #(10,100,20,200,30,300,40)
+
+#if .. elif .. else block
+a=10
+b=20
+if(a>b):
+    print(f'{a} is greater than {b}')
+elif(a<b):
+    print(f'{a} is smaller than {b}')
+else:
+    print(f'{a} is equal to {b}')
+o/p:
+10 is smaller than 20
+
+#while loop
+a=1
+while(a<5):
+    print(a)
+    a+=1
+o/p:
+1
+2
+3
+4
+
+l1 = ['hey','hii','hello']
+for i in l1:
+    print(f'{i} Tushar')
+o/p:
+hey Tushar
+hii Tushar
+hello Tushar
+
+#Exception handling
+#try - except block
+#example1:
+try:
+    a = 10/0
+except Exception as e:
+    print(e)
+o/p:
+division by zero
+
+#example2:
+try:
+    a = 10/0
+except Exception as e:
+    print(e)
+else:
+    print('executed when there is no error')
+finally:
+    print('it will execute mandatorily')
+o/p:
+division by zero
+it will execute mandatorily
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
