@@ -1,6 +1,15 @@
 #python
 #In Python, there is no Null instead we use None
 #to increment variable, we can use n = n+1 or n += 1 but not n++
+#we can use AND, && , OR , || operators.
+
+#For loop with RANGE function
+for n in range(5):    #it starts from 0 till 5 - 1, by default its increment
+    print(n)            #o/p: 0,1,2,3,4
+for n in range(2,6):
+    print(n)            #o/p: 2,3,4,5
+for n in range(5,1,-1):    # -1 indicates decrement
+    print(n)            #o/p: 5,4,3,2
 
 #Array
 import array as arr
