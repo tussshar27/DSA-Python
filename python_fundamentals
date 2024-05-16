@@ -146,6 +146,34 @@ print(nums)
 o/p:
 [23, 13, 10]
 
+#List Comprehension, we want to go through each element of range and add that element to an array.
+num = [i for i in range(5)]
+print(num)                #o/p: [0, 1, 2, 3, 4]
+
+num = [i+i for i in range(5)]
+print(num)                #o/p: [0, 2, 4, 6, 8]
+#create list of arrays in range
+num = [[1] * 2 for i in range(5)]
+print(num)
+o/p:
+[[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]]
+
+#String, unchangeable-immutable
+s = "abc"
+print(s)
+print(s[0])            # a
+print(s[0:2])            # ab
+
+#type casting, first it will typecast and to the operation
+print(int("123") + int("123"))            # 246
+print(str(123) + str(123))                # 123123
+
+
+
+
+
+
+
 #Dictionary				#keys should be unique but values can be duplicate
 # NOTE: TO create dictionary, we use {} braces 
 # while to access the value of a key, we use [] just like list.
