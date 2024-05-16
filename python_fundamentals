@@ -96,6 +96,10 @@ o/p:
 3 k
 print(l1[0:4])			#[1, 2, 3, 4.56]
 print(l1[-1])			#9
+num = [1,2,3,4,5]
+for n in range(len(num)):
+    print(n)                #o/p: 0,1,2,3,4
+    
 
 #Dictionary				#keys should be unique but values can be duplicate
 # NOTE: TO create dictionary, we use {} braces 
