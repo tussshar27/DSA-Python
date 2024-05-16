@@ -1,5 +1,7 @@
 #python
-#In python there is no Null instead we use None
+#In Python, there is no Null instead we use None
+#to increment variable, we can use: n = n+1 , n += 1, but not n++
+
 #Array
 import array as arr
 a1 = arr.array(i,[1,2,3,4])			#i means integer
