@@ -1,6 +1,6 @@
 #python
 #In Python, there is no Null instead we use None
-#to increment variable, we can use: n = n+1 , n += 1, but not n++
+#to increment variable, we can use n = n+1 or n += 1 but not n++
 
 #Array
 import array as arr
