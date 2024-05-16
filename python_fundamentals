@@ -1,5 +1,5 @@
 #python
-
+#In python there is no Null instead we use None
 #Array
 import array as arr
 a1 = arr.array(i,[1,2,3,4])			#i means integer
