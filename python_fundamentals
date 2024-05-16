@@ -10,6 +10,24 @@ for n in range(2,6):
     print(n)            #o/p: 2,3,4,5
 for n in range(5,1,-1):    # -1 indicates decrement
     print(n)            #o/p: 5,4,3,2
+for n in range(7,1,-2):
+    print(n)            #o/p: 7,5,3
+
+#Division
+print(5/2)            #o/p: 2.5
+print(5//2)           #o/p: 2        #it rounds to 0
+
+%Modular operator
+print(10%3)            #o/p: 1 remainder
+
+%math function
+import math
+print(math.sqrt(2))         #o/p: 1.4142135623730951
+print(math.pow(2,3))        #o/p: 8.0
+print(math.floor(3/2))        # 1
+print(math.ceil(3/2))         # 2
+print(3/2)                    #1.5
+
 
 #Array
 import array as arr
