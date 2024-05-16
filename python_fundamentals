@@ -168,13 +168,96 @@ print(s[0:2])            # ab
 print(int("123") + int("123"))            # 246
 print(str(123) + str(123))                # 123123
 
+#print ASCII value of a character
+print(ord('a'))                #97
+print(ord('z'))                #122
+
+#combining list of strings using .join method
+str = ["abc","pqr","mno"]
+print("".join(str))                #abcpqrmno
+print("-".join(str))                #abc-pqr-mno
+
+#Queue, follows First In First Out approach, consider normal customer queue
+#there are three ways to implement queue: list, collections.deque, queue.Queue
+#queue implementation using list O(N)
+# Instead of enqueue() and dequeue(), append() and pop() functions are used.
+queue = []
+queue.append(1)
+queue.append(2)
+queue.append('c')
+print(queue)
+queue.pop(0)    #First Out
+#queue.pop()     #it will remove the last element which is against of queue operation
+print(queue)
+o/p:
+[1, 2, 'c']
+[2, 'c']
+
+#queue implementation using collections.deque O(1)
+#deque is a class from the collections module
+#Deque is preferred over list in the cases where we need quicker append and pop operations from both the ends of container.
+# Instead of enqueue and deque, append() and popleft() functions are used
+#The code uses a deque from the collections module to represent a queue
+from collections import deque
+q = deque()
+q.append(1)
+q.append(2)
+q.append(3)        #1,2,3 queue is by default starts from left to right
+print(q)
+q.popleft()
+print(q)
+q.appendleft(5)    #we can also append queue from left
+print(q)
+q.pop()            #removing from right
+print(q)
+o/p:
+deque([1, 2, 3])
+deque([2, 3])
+deque([5, 2, 3])
+deque([5, 2])
+
+#queue implementation using queue.Queue
+maxsize – Number of items allowed in the queue.
+empty() – Return True if the queue is empty, False otherwise.
+full() – Return True if there are maxsize items in the queue. If the queue was initialized with maxsize=0 (the default), then full() never returns True.
+get() – Remove and return an item from the queue. If queue is empty, wait until an item is available.
+get_nowait() – Return an item if one is immediately available, else raise QueueEmpty.
+put(item) – Put an item into the queue. If the queue is full, wait until a free slot is available before adding the item.
+put_nowait(item) – Put an item into the queue without blocking. If no free slot is immediately available, raise QueueFull.
+qsize() – Return the number of items in the queue.
+from queue import Queue
+q = Queue(maxsize = 3)
+print(q.qsize()) 
+q.put('a')
+q.put('b')
+q.put('c')
+print("\nFull: ", q.full()) 
+print("\nElements dequeued from the queue")
+print(q.get())
+print(q.get())
+print(q.get())
+print("\nEmpty: ", q.empty())
+q.put(1)
+print("\nEmpty: ", q.empty()) 
+print("Full: ", q.full())
+o/p:
+0
+Full:  True
+Elements dequeued from the queue
+a
+b
+c
+Empty:  True
+Empty:  False
+Full:  False
 
 
 
 
 
 
-#Dictionary				#keys should be unique but values can be duplicate
+
+#Dictionary/HashMap				#keys should be unique but values can be duplicate
 # NOTE: TO create dictionary, we use {} braces 
 # while to access the value of a key, we use [] just like list.
 d1 = {1:10,2:20,'i':45,5:23,6:'xyz',7:[1,2,3]}
@@ -219,10 +302,19 @@ print(d2)
 d2.update({5:500})                  #updating key and its value
 print(d2)                           #{5: 100}
 
-#Sets
+#HashSet
 #only unique values are stored.
 s1 = set()
-print(s1)
+s1.add(10)
+s1.add(29)
+s1.add(34)
+print(s1)                #{10, 34, 29}
+print(len(s1))            #3
+print(10 in s1)            #True
+print(20 in s1)            #False
+s1.remove(34)
+print(s1)                #{10, 29}
+
 l1 = [1,1,1,2,2,3,4,4,5]
 s2 = set(l1)
 print(s1)                           #{1, 2, 3, 4, 5}
@@ -232,6 +324,17 @@ s1.add(30)
 print(s1)                           #{10, 20, 30}
 s1.remove(20)
 print(s1)                           #{10, 30}
+#converting List to Set
+print(set([1,1,2,3,3]))            # 1,2,3
+
+#Set comprehension
+hs = {i for i in range(5)}
+print(hs)                            #{0, 1, 2, 3, 4}
+
+
+
+
+
 
 #Tuple
 #it is similar to list
