@@ -1,15 +1,16 @@
 1. How to Add Two Numbers in Python – Easy Programs
-a = int(input("Enter 1st number: "))
+a = int(input("Enter 1st number: "))        #calling int() function because by default input() function generates string value from user.
 b = int(input("Enter 2nd number: "))
 
 def addition(a,b):
     return a + b
     
-print(addition(a,b))
+print(f'1st number: {a} and 2nd number: {b} then addition of both: {addition(a,b)}')
 output:
 Enter 1st number: 10
 Enter 2nd number: 20
-30
+1st number: 10 and 2nd number: 20 then addition of both: 30
 
 === Code Execution Successful ===
 
+2. 
