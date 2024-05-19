@@ -1,7 +1,7 @@
 #python
 #In Python, there is no Null instead we use None
 #to increment variable, we can use n = n+1 or n += 1 but not n++
-#we can use AND, && , OR , || operators.
+#we can use AND, && , OR , || operators
 
 #For loop with RANGE function
 for n in range(5):    #it starts from 0 till 5 - 1, by default its increment
@@ -454,6 +454,19 @@ print(myfunc(10,20))
 o/p:
 30
 
+#using another lambda function example
+a = int(input("Enter 1st number: "))
+b = int(input("Enter 2st number: "))
+
+maximum = lambda a,b: a if a>b else b
+
+print(maximum(a,b))
+ouptut:
+Enter 1st number: 10
+Enter 2st number: 20
+20
+
+=== Code Execution Successful ===
 
 
 #class
