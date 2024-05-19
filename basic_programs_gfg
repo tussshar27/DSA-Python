@@ -13,4 +13,34 @@ Enter 2nd number: 20
 
 === Code Execution Successful ===
 
-2. 
+2. Find Maximum of two numbers in Python
+a = int(input("Enter 1st number: "))
+b = int(input("Enter 2st number: "))
+
+def maximum(a,b):
+    if a>b:
+        print(f'{a} is greater than {b}')
+    else:
+        print(f'{b} is greater than {a}')
+        
+maximum(a,b)
+output:
+Enter 1st number: 10
+Enter 2st number: 20
+20 is greater than 10
+
+=== Code Execution Successful ===
+
+#using lambda function
+a = int(input("Enter 1st number: "))
+b = int(input("Enter 2st number: "))
+
+maximum = lambda a,b: a if a>b else b
+
+print(maximum(a,b))
+ouptut:
+Enter 1st number: 10
+Enter 2st number: 20
+20
+
+=== Code Execution Successful ===
