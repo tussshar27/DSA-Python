@@ -44,3 +44,86 @@ Enter 2st number: 20
 20
 
 === Code Execution Successful ===
+
+#using list compression
+a=10
+b=20
+maximum = [a if a>b else b]
+print(maximum)
+output:
+[20]
+
+=== Code Execution Successful ===
+
+3.Python Program to Find the Factorial of a Number.
+a=5
+ft=1
+while a>=1:
+    ft = ft*a
+    a-=1
+    
+print(ft)
+output:
+120
+
+=== Code Execution Successful ===
+
+4.Python Program for Simple Interest.
+p=100
+r=10
+t=12
+
+def simpleinterest(p,r,t):
+    return (p*r*t)/100
+print(simpleinterest(p,r,t))
+output:
+120.0
+
+=== Code Execution Successful ===
+
+5.Python Program for Compound Interest.
+formula:
+# A = P(1 + R/100) t 
+# Compound Interest = A – P 
+# where,
+# A is amount 
+# P is the principal amount 
+# R is the rate and 
+# T is the time span
+p=100
+r=10
+t=12
+
+def compoundinterest(p,r,t):
+    a = p * (pow((1 + r/100),t))         #with using pow function
+    #a = p * ((1 + r/100)**t)            #without using pow(,) function
+    ci = a - p
+    return ci
+
+print(compoundinterest(p,r,t))
+output:
+213.8428376721003
+
+=== Code Execution Successful ===
+
+6. Python Program to Check Armstrong Number.
+a = 153
+m = a
+n = len(str(a))
+t = 0
+
+while a != 0:
+    r = a % 10
+    t = t + (r**n)
+    a = a // 10
+
+if m==t:
+    print(f'{m} is an armstrong number')
+else:
+    print(f'{m} is not an armstrong number')
+output:
+153 is an armstrong number
+
+=== Code Execution Successful ===
+
+
