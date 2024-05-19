@@ -447,6 +447,13 @@ print(func1('a','b'))
 o/p:
 abc
 
+#lambda function
+myfunc = lambda x,y: x+y            #syntax: function_name = lambda parameters: return_statement
+
+print(myfunc(10,20))
+o/p:
+30
+
 
 
 #class
@@ -523,6 +530,7 @@ finally:
 o/p:
 division by zero
 it will execute mandatorily
+
 
 
 
