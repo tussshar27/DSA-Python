@@ -253,13 +253,9 @@ Full:  False
 
 
 
-
-
-
-
 #Dictionary/HashMap				#keys should be unique but values can be duplicate
 # NOTE: TO create dictionary, we use {} braces 
-# while to access the value of a key, we use [] just like list.
+# while to access the value of a key, we use [] just like in list.
 d1 = {1:10,2:20,'i':45,5:23,6:'xyz',7:[1,2,3]}
 print(d1[2])				#20
 print(d1)					#{1: 10, 2: 20, 'i': 45, 5: 23, 6: 'xyz',7:[1,2,3]}
@@ -289,7 +285,10 @@ o/p:
 10 200
 keys:10 and values:200
 print(d2)                           #{5: 100, 10: 200}
+#get() function in dictionary to get value form key.
 print(d2.get(5))                    #100
+print(len(d2))                      #2
+print(5 in d2)                      #True
 d3 = d2.copy()                      #copy of dictionary
 d3.clear()                          #clear data of dictionary
 print(d2.keys())                    #dict_keys([5, 10])
@@ -299,8 +298,22 @@ d2.pop(10)                          #passing key to remove key and its value
 print(d2)                           #{5: 100}
 d2.popitem()                        #it will remove last key and its value
 print(d2)
+#update() function
 d2.update({5:500})                  #updating key and its value
 print(d2)                           #{5: 100}
+#dict comprehension
+d = {i: 4*i for i in range(5)}
+print(d)                            #{0: 0, 1: 4, 2: 8, 3: 12, 4: 16}
+#key example
+d = {0:10,2:20,3:30}
+for i in d:                         #by default it assume i as key
+    print(i,d[i])    
+o/p:
+0 10
+2 20
+3 30
+
+
 
 #HashSet
 #only unique values are stored.
@@ -333,18 +346,129 @@ print(hs)                            #{0, 1, 2, 3, 4}
 
 
 
-
-
-
 #Tuple
 #it is similar to list
-#the main difference between both are, lists are changeable where as tuples are not.
+#the main difference between both are, lists are changeable where as tuples are not. so, we can't modify tuple.
 t1 = (1,2,3,4,5.67,[1,2,3])
 print(t1)                           #(1, 2, 3, 4, 5.67,[1,2,3])
+#t1[0]=10        #error
 #to insert a new value in existing tuple, 
 #there is only one way i.e to overwrite the tuple.
 t1 = (10,100,20,200,30,300,40)
 print(t1)                           #(10,100,20,200,30,300,40)
+#can be used as a key for hashmap(dictionary)/hashset(set) but list can't.
+dt = {(1,2):100,3:200}
+print(dt[(1,2)])                    #100
+
+
+
+#Heap queue
+#Heap data structure is mainly used to represent a priority queue. 
+#In Python, it is available using the “heapq” module. 
+#The property of this data structure in Python is that each time the smallest heap element is popped(min-heap). 
+#Whenever elements are pushed or popped, heap structure is maintained. 
+#The heap[0] element also returns the smallest element each time.
+
+import heapq
+h1 = []
+heapq.heappush(h1,5)
+heapq.heappush(h1,3)
+heapq.heappush(h1,15)
+print(h1)                        #[3, 5, 15]
+print(h1[0])                     #3
+while len(h1):                    #while loop will run till heap gets empty.
+    print(heapq.heappop(h1))        
+o/p:
+3
+5
+15
+#by default, there is no max heap but we can create one by using min heap and multiplying by -1 while push & pop.
+#so now the values are printed from greatest to smallest.
+import heapq
+
+h1 = []
+heapq.heappush(h1,-5)
+heapq.heappush(h1,-3)
+heapq.heappush(h1,-15)
+print(h1)
+print(-1 * h1[0])
+
+while len(h1):
+    print(-1 * heapq.heappop(h1))
+o/p:
+[-15, -3, -5]
+15
+15
+5
+3
+#build heap from initial value
+import heapq
+arr = [6,3,5,1,9,2]
+print(arr)
+heapq.heapify(arr)
+print(arr)
+while arr:
+    print(heapq.heappop(arr))
+o/p:
+[6, 3, 5, 1, 9, 2]
+[1, 3, 2, 6, 9, 5]
+1
+2
+3
+5
+6
+9
+
+
+
+#function
+def myfunc(m,n):
+    return m*n
+
+print(myfunc(10,20))
+o/p: 200
+
+def myfunc2(m,n):
+    print(m*n)
+    
+myfunc2(10,20)
+o/p: 200
+
+#nested functions have access to outer function variables
+def func1(m,n):
+    c = 'c'
+    
+    def func2():
+        return m+n+c
+        
+    return func2()
+        
+print(func1('a','b'))
+o/p:
+abc
+
+
+
+#class
+#self is passed in every method inside a class. it's basically like 'this' keyword in other lang.
+class A1:
+    def  __init__(self,nums):   #passing the list as parameter
+        self.nums = nums
+        self.size = len(nums)
+        
+    #self keyword required as a paramter in all method of a class
+    def func1(self):
+        return self.size
+        
+    def getdoublelen(self):
+        return 2*self.func1()
+        
+a = A1([1,2,3,4])
+print(a.getdoublelen())
+o/p:
+8
+
+
 
 #if .. elif .. else block
 a=10
