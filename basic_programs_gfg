@@ -107,23 +107,51 @@ output:
 === Code Execution Successful ===
 
 6. Python Program to Check Armstrong Number.
-a = 153
+a = int(input("Enter number:"))        #eg.153
 m = a
-n = len(str(a))
-t = 0
-
-while a != 0:
+l = len(str(a))
+f = 0
+while a!=0:
     r = a % 10
-    t = t + (r**n)
+    f = f + pow(r,l)
     a = a // 10
-
-if m==t:
-    print(f'{m} is an armstrong number')
+    
+if m==f:
+    print("This is an Armstrong number")
 else:
-    print(f'{m} is not an armstrong number')
+    print("This is not an Armstrong number")
 output:
-153 is an armstrong number
+Enter number:123
+This is not an Armstrong number
 
 === Code Execution Successful ===
+
+7. Python Program to Find Area of a Circle
+#Area = pi * r2
+#where r is radius of circle 
+r = 10
+pi = 3.14
+
+print(f'Area of circle: {pi * r**2}')
+print(f'Area of circle: {pi * pow(r,2)}')   #using pow() function
+output:
+Area of circle: 314.0
+Area of circle: 314.0
+
+=== Code Execution Successful ===
+
+8. Python Program to Print all Prime numbers in an Interval.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
