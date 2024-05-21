@@ -1,1 +1,26 @@
+1. Python Program to Find Sum of Array.
+# using global variable to access variable present outside the function
+arr = {1,2,3}
+sum = 0
+def mysum(arr):
+    global sum
+    for i in arr:
+        sum = sum + i
+    return sum
+print(mysum(arr))
+
+#without using global variable
+arr = {1,2,3}
+def mysum(arr):
+    sum = 0
+    for i in arr:
+        sum = sum + i
+    return sum
+print(mysum(arr))
+output:
+6
+
+=== Code Execution Successful ===
+
+
 
