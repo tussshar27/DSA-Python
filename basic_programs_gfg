@@ -141,7 +141,45 @@ Area of circle: 314.0
 === Code Execution Successful ===
 
 8. Python Program to Print all Prime numbers in an Interval.
+# 2, 3, 5, 7, 11, …
+s=int(input("Enter start number: "))
+e=int(input("Enter end number: "))
+l=[]
+for i in range(s,e+1):
+    if i==0 or i==1:
+        continue
+    else:
+        for j in range(2,int(i/2)):    #using for - else loop
+            if i%j==0:
+                break                #then it is not a prime no, get out of loop and change value of i
+        else:                        #If the loop breaks, the else block is not executed.
+            l.append(i)
+print(l)
+output:
+Enter start number: 2
+Enter end number: 20
+[2, 3, 4, 5, 7, 11, 13, 17, 19]
 
+=== Code Execution Successful ===
+
+9. Python Program to Check Prime Number.
+# 2, 3, 5, 7, 11, …
+
+def prime(n):
+    for i in range(2,int(n/2)):
+        if n%i==0:
+            return False
+        
+    return True
+
+print(prime(6))
+output:
+False
+
+=== Code Execution Successful ===
+
+10. Python Program to Print the Fibonacci sequence.
+Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
 
 
 
