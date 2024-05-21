@@ -197,6 +197,15 @@ Enter number: 100
 
 === Code Execution Successful ===
 
+11. Program to print ASCII Value of a character.
+a = input("Enter a character: ")
+print(f'ASCII value of character {a} is {ord(a)}')
+output:
+Enter a character: a
+ASCII value of character a is 97
+
+=== Code Execution Successful ===
+
 
 
 
