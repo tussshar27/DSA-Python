@@ -179,7 +179,23 @@ False
 === Code Execution Successful ===
 
 10. Python Program to Print the Fibonacci sequence.
-Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
+#Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
+n = int(input("Enter number: "))
+i = 0
+j = 1
+a = 0
+l = [0,1]
+while a < n:
+    a = i + j
+    i = j
+    j = a
+    l.append(a)
+print(l)
+output:
+Enter number: 100
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+
+=== Code Execution Successful ===
 
 
 
