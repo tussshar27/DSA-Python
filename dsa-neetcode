@@ -1,4 +1,3 @@
-
 1. Contains Duplicate
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 ->
@@ -40,7 +39,7 @@ def anagram(s,t):
     #converting strings into dictionary with value.
     s1 , t1 = {}, {}
     for i in range(len(s)):     #can be any, s or t
-        # s1[s[i]] = 1 + s1.get(s[i],0)
+        # s1[s[i]] = 1 + s1.get(s[i],0)      #to store the count
         # t1[t[i]] = 1 + t1.get(t[i],0)
 
     print(s1)
@@ -58,7 +57,39 @@ True
 
 === Code Execution Successful ===
 
-3. 
+3. Two Sum
+#using bruteforce
+def twoSum(nums, target):
+    l1 = []
+    for i in range(len(nums)):
+        if nums[i] == target:
+            l1.append(i)
+        if nums[i] < target:
+            for j in range(i+1, len(nums)):
+                if abs(nums[i])+abs(nums[j]) == target:
+                    l1.extend([i,j])
+    print(l1)
+
+twoSum([-1,-2,-3,-4,-5],8)
+output:
+[2, 4]
+
+=== Code Execution Successful ===
+#using hashmap time: O(N) bc we are looping just one time and inserting in dictionary which is O(1) that is ignorable and space: O(N) bc we are using hashmap so its taking extra space.
+class Solution:
+    # eg list: [2,7,11,15], target: 9
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hm = {}     #created hashmap to store each iterated value of list
+        for k,v in enumerate(nums):     #key,value
+            d = target - v          #difference of target and value
+            if d in hm:             #if difference is present in hashmap
+                return [hm[d],k]    #print index of difference, and key
+            hm[v] = k   #eg 2:0
+output:
+[0,1]
+
+
+
 
 
 
