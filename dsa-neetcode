@@ -20,8 +20,45 @@ True
 
 === Code Execution Successful ===
     
-2. 
+2. Valid Anagram
+#anagram
+from collections import Counter
+s = "carr"
+t = "racr"
 
+def anagram(s,t):
+    if len(s) != len(t):
+        return False
+    #3 ways to solve:
+    #1. using Counter()
+    # return Counter(s) == Counter(t)
+    
+    #2. using sorted()
+    # return sorted(s) == sorted(t)
+    
+    #3. using hashmap/dictionary
+    #converting strings into dictionary with value.
+    s1 , t1 = {}, {}
+    for i in range(len(s)):     #can be any, s or t
+        # s1[s[i]] = 1 + s1.get(s[i],0)
+        # t1[t[i]] = 1 + t1.get(t[i],0)
+
+    print(s1)
+    print(t1)
+    for j in s1:        #by default j is considered as key
+        if s1[j] != t1.get(j):
+            return False
+    return True
+        
+print(anagram(s,t))
+output:
+{'c': 1, 'a': 1, 'r': 2}
+{'r': 2, 'a': 1, 'c': 1}
+True
+
+=== Code Execution Successful ===
+
+3. 
 
 
 
