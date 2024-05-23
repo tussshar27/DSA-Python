@@ -287,6 +287,7 @@ keys:10 and values:200
 print(d2)                           #{5: 100, 10: 200}
 #get() function in dictionary to get value form key.
 print(d2.get(5))                    #100
+print(d2.get(1,27))                 #if there is no key: 1 then it will give a default value i.e. 27.
 print(len(d2))                      #2
 print(5 in d2)                      #True
 d3 = d2.copy()                      #copy of dictionary
