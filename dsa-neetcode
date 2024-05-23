@@ -2,13 +2,31 @@
 1. Contains Duplicate
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 ->
-There are three ways to solve this question using bruteforce method which compare each value with every other value O(Nsquare), second is to first sort and compare only neighbor value and third is to insert in hashset set().
-def containsDuplicate(self, num:List[int]):
-    hashset = set()
-    for n in num:
-        if n in hashset:
+There are three ways to solve this question using bruteforce method which compare each value with every other value O(Nsquare), second is to sort array and compare only the neighbor value to check if there is any duplicate O(nlogn) eg. 1,2,3,4,1 -> sort -> 1,1,2,3,4 and third is to insert in hashset set(), since hashset stores only unique values so if there is any duplicate which we want to insert then it will not insert in hashset Time: O(N) and Space: O(N).
+
+def duplicates(num):
+    h1 = set()
+    for i in num:
+        if i in h1:
             return True
-        hashset.add(n)
+        h1.add(i)
     return False
+
+
+num = [1,2,3,4,1]
+print(duplicates(num))
+output:
+True
+
+=== Code Execution Successful ===
     
 2. 
+
+
+
+
+
+
+
+
+
