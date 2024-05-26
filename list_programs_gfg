@@ -257,5 +257,21 @@ print(myfunc(l1))
 output:
 4
 
+12. Python program to find N largest elements from a list
+l1 = [10,2,30,4,5]
+n = 3
+def myfunc(l1,n):
+    l2 = []
+    for i in range(0,n):
+        l2.append(l1[i])
+    return l2
+print(myfunc(l1,n))
+output:
+[10, 2, 30]
+
+
+
+
+
 
 
