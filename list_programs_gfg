@@ -269,6 +269,24 @@ print(myfunc(l1,n))
 output:
 [10, 2, 30]
 
+#2nd method (using single list)
+l1 = [10,2,30,40,5]
+n = 3
+def myfunc(l1,n):
+    r = len(l1) - n
+    for i in range(r):
+        l1.pop()
+    return l1
+
+print(myfunc(l1,n))
+output:
+[10, 2, 30]
+
+
+
+
+
+
 
 
 
