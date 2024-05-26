@@ -295,10 +295,9 @@ print(myfunc(l1))
 output:
 [10, 42]
 
-#2nd method
+#2nd method (using single list)
 l1 = [10,23,31,42,5]
 def myfunc(l1):
-    l2 = []
     for i in range(len(l1)):
         if l1[i] % 2 == 0:
             print(l1[i],end=" ")
@@ -309,7 +308,6 @@ output:
 #3rd method
 l1 = [10,23,31,42,5]
 def myfunc(l1):
-    l2 = []
     for i in range(len(l1)):
         if l1[i] % 2 == 0:
             print(l1[i])
@@ -318,13 +316,164 @@ output:
 10
 42
 
+14. Python program to print odd numbers in a List
+l1 = [2, 7, 5, 64, 14]
+def myfunc(l1):
+    for i in range(len(l1)):
+        if l1[i] % 2 != 0:
+            print(l1[i],end=' ')
+myfunc(l1)
+output:
+7 5
 
+#2nd method (using pass)
+l1 = [2, 7, 5, 64, 14]
+def myfunc(l1):
+    for i in range(len(l1)):
+        if l1[i] % 2 == 0:
+            pass
+        else:
+            print(l1[i],end=' ')
+myfunc(l1)
+output:
+7 5
 
+#3rd method (using enumerate() function)
+l1 = [2, 7, 5, 64, 14]
+def myfunc(l1):
+    for i,j in enumerate(l1):
+        if j % 2 != 0:
+            print(j,end=' ')
+myfunc(l1)
+output:
+7 5
 
+15. Python program to print all even numbers in a range
+s = 1
+e = 15
+def myfunc(s,e):
+    for i in range(s,e+1):
+        if i % 2 == 0:
+            print(i,end=" ")
+myfunc(s,e)
+output:
+2 4 6 8 10 12 14 
 
+#2nd method (using user input)
+s = int(input("Enter start number: "))
+e = int(input("Enter end number: "))
+def myfunc(s,e):
+    for i in range(s,e+1):
+        if i % 2 == 0:
+            print(i,end=" ")
+myfunc(s,e)
+output:
+Enter start number: 1
+Enter end number: 20
+2 4 6 8 10 12 14 16 18 20 
 
+16. Python program to print all odd numbers in a range
+s = int(input("Enter start number: "))
+e = int(input("Enter end number: "))
+def myfunc(s,e):
+    for i in range(s,e+1):
+        if i % 2 != 0:
+            print(i,end=" ")
+myfunc(s,e)
+output:
+Enter start number: 1
+Enter end number: 20
+1 3 5 7 9 11 13 15 17 19 
 
+17. Python program to print positive numbers in a list
+l1 = [12,-34,27,53,-8]
+def myfunc(l1):
+    for i in l1:
+        if i > 0:
+            print(i,end=" ")
+myfunc(l1)
+output:
+12 27 53
 
+#2nd method (using while loop)
+l1 = [12,-34,27,53,-8]
+def myfunc(l1):
+    n = 0
+    while n < len(l1):
+        if l1[n] > 0:
+            print(l1[n],end=" ")
+        n += 1
+myfunc(l1)
+output:
+12 27 53
+
+#3rd method (using enumerate() function)
+l1 = [12,-34,27,53,-8]
+print([j for i,j in enumerate(l1) if j > 0])
+output:
+[12, 27, 53]
+
+18. Python program to print negative numbers in a list
+#using enumerate() function with condition and list comprehension
+l1 = [12,-34,27,53,-8]
+print([j for i,j in enumerate(l1) if j < 0])
+output:
+[-34, -8]
+
+#2nd method (using while loop)
+l1 = [12,-34,27,53,-8]
+def myfunc(l1):
+    n = 0
+    while n < len(l1):
+        if l1[n] < 0:
+            print(l1[n],end=" ")
+        
+        n += 1
+myfunc(l1)
+output:
+-34 -8
+
+19. Python program to print all positive numbers in a range
+s = -4
+e = 10
+def myfunc(s,e):
+    if s < 0:
+        for i in range(e+1):
+            print(i,end=" ")
+    else:
+        for i in range(s,e+1):
+            print(i,end=" ")
+myfunc(s,e)
+output:
+0 1 2 3 4 5 6 7 8 9 10 
+
+#2nd example
+s = 4
+e = 10
+def myfunc(s,e):
+    if s < 0:
+        for i in range(e+1):
+            print(i,end=" ")
+    else:
+        for i in range(s,e+1):
+            print(i,end=" ")
+myfunc(s,e)
+output:
+4 5 6 7 8 9 10
+
+20. Python program to print all negative numbers in a range
+s = -4
+e = -2
+def myfunc(s,e):
+    if e > 0:
+        for i in range(s,0):
+            print(i,end=" ")
+    else:
+        for i in range(s,e+1):
+            print(i,end=" ")
+myfunc(s,e)
+output:
+-4 -3 -2
 
 
 
