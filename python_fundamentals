@@ -1,4 +1,11 @@
 #python
+#There are four collection data types in the Python programming language:
+
+#List is a collection which is ordered and changeable. Allows duplicate members.
+#Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+#Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+#Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
 #In Python, there is no Null instead we use None
 #to increment variable, we can use n = n+1 or n += 1 but not n++
 #we can use AND, && , OR , || operators
