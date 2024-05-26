@@ -282,6 +282,42 @@ print(myfunc(l1,n))
 output:
 [10, 2, 30]
 
+13. Python program to print even numbers in a list
+l1 = [10,23,31,42,5]
+def myfunc(l1):
+    l2 = []
+    for i in range(len(l1)):
+        if l1[i] % 2 == 0:
+            l2.append(l1[i])
+
+    return l2
+print(myfunc(l1))
+output:
+[10, 42]
+
+#2nd method
+l1 = [10,23,31,42,5]
+def myfunc(l1):
+    l2 = []
+    for i in range(len(l1)):
+        if l1[i] % 2 == 0:
+            print(l1[i],end=" ")
+myfunc(l1)
+output:
+10 42
+
+#3rd method
+l1 = [10,23,31,42,5]
+def myfunc(l1):
+    l2 = []
+    for i in range(len(l1)):
+        if l1[i] % 2 == 0:
+            print(l1[i])
+myfunc(l1)
+output:
+10
+42
+
 
 
 
