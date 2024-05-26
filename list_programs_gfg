@@ -1,1 +1,96 @@
+https://www.geeksforgeeks.org/python-program-to-interchange-first-and-last-elements-in-a-list/
+1. Python program to interchange first and last elements in a list
+#using swap
+l1 = [1,2,3,4]
+def interchange(l1):
+    temp = l1[0]
+    l1[0] = l1[-1]
+    l1[-1] = temp
+    return l1
+    
+print(interchange(l1))
+output:
+[4, 2, 3, 1]
+
+#2nd method
+l1 = [1,2,3,4]
+def interchange(l1):
+    l1[0],l1[-1] = l1[-1],l1[0]
+    return l1
+    
+print(interchange(l1))
+output:
+[4, 2, 3, 1]
+
+2. Python Program to Swap Two Elements in a List
+l1 = [1,2,3,4]
+s = 1
+e = 3
+def interchange(l1,s,e):
+    l1[s-1],l1[e-1] = l1[e-1],l1[s-1]
+    return l1
+    
+print(interchange(l1,s,e))
+output:
+[3, 2, 1, 4]
+
+3. How To Find the Length of a List in Python
+l1 = [1,2,3,4]
+def interchange(l1):
+    le = len(l1)
+    return le
+    
+print(interchange(l1))
+output:
+4
+
+#2nd method (using sum() and list comprehension)
+l1 = [1,2,3,4]
+def interchange(l1):
+    le = sum(1 for i in l1)
+    return le
+    
+print(interchange(l1))
+output:
+4
+
+#3rd method
+l1 = [1,2,3,4]
+def interchange(l1):
+    counter = 0
+    
+    for i in l1:
+        counter += 1
+    return counter
+    
+print(interchange(l1))
+output:
+4
+
+4. Check if element exists in list in Python
+l1 = [1,2,3,4]
+c = 30
+def interchange(l1,c):
+    for i in l1:
+        if c == i:
+            return True
+    return False
+    
+print(interchange(l1,c))
+output:
+False
+
+#2nd method
+l1 = [1,2,3,4]
+c = 30
+def interchange(l1,c):
+    if c in l1:
+        return True
+    else:
+        return False
+    
+print(interchange(l1,c))
+output:
+False
+
 
