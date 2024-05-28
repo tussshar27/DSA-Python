@@ -616,6 +616,117 @@ output:
 [('T', 'A'), (7, 5), (23, 5, 10)]
 
 === Code Execution Successful ===
+#2nd method
+from collections import Counter
+l1 = [('T','A'),(),(7,5),(),(23,5,10)]
+n = 5
+def myfunc(l1,n):
+    for i in l1:
+        if i == ():
+            l1.remove(i)
+    return l1
+print(myfunc(l1,n))
+output:
+[('T', 'A'), (7, 5), (23, 5, 10)]
+
+=== Code Execution Successful ===
+
+26. Program to print duplicates from a list of integers
+from collections import Counter
+l1 = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, -20, -20]
+def myfunc(l1):
+    s = set()
+    l2 = []
+    for i in l1:
+        if i not in s:
+            s.add(i)
+        else:
+            l2.append(i)
+    return list(set(l2))
+print(myfunc(l1))
+output:
+[20, -20, 30, 60]
+
+=== Code Execution Successful ===
+
+27. Python program to find Cumulative sum of a list
+from collections import Counter
+l1 = [10, 20, 30, 20, 30, 40]
+def myfunc(l1):
+    l2 = []
+    a = 0
+    for i in l1:
+        a += i
+        l2.append(a)
+    return l2
+print(myfunc(l1))
+output:
+[10, 30, 60, 80, 110, 150]
+
+=== Code Execution Successful ===
+
+28. Sum of number digits in List
+l1 = [12, 67, 98, 34]
+def myfunc(l1):
+    l2 = []
+    for i in l1:
+        s = 0
+        for j in str(i):
+            s += int(j)
+        l2.append(s)
+    return l2
+print(myfunc(l1))
+output:
+[3, 13, 17, 7]
+
+=== Code Execution Successful ===
+
+29. Break a list into chunks of size N in Python
+#IMP using slicing method
+l1 = [12, 67, 98, 34,'abc','pqr',27]
+n = 3
+def myfunc(l1,n):
+    for i in range(0,len(l1),n):
+        print(l1[i:i+n])
+    return
+print(myfunc(l1,n))
+output:
+[12, 67, 98]
+[34, 'abc', 'pqr']
+[27]
+None
+
+=== Code Execution Successful ===
+
+30. Sort the values of first list using second list in Python
+x = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
+y = [0,   1,   1,    0,   1,   2,   2,   0,   1]
+
+def myfunc(x,y):
+    l1 = zip(y,x)
+    l2 = [j for i,j in sorted(l1)]
+    return l2
+print(myfunc(x,y))
+output:
+['a', 'd', 'h', 'b', 'c', 'e', 'i', 'f', 'g']
+
+=== Code Execution Successful ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
