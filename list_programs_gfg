@@ -475,6 +475,151 @@ myfunc(s,e)
 output:
 -4 -3 -2
 
+22. Python – Remove empty List from List
+#using list comprehension
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l = [a for a in l1 if a != []]
+    return l
+print(myfunc(l1))
+output:
+[5, 6, 7, 23]
+
+=== Code Execution Successful ===
+#2nd method (using another list)
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l2 = []
+    for i in l1:
+        if i:
+            l2.append(i)
+    
+    return l2
+print(myfunc(l1))
+output:
+[5, 6, 7, 23]
+
+=== Code Execution Successful ===
+#3rd method (using enumerate() function)
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l = [j for i,j in enumerate(l1) if j != []]
+    
+    return l
+print(myfunc(l1))
+output:
+[5, 6, 7, 23]
+
+=== Code Execution Successful ===
+
+23. Cloning or Copying a list
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l2 = l1.copy()
+    return l2
+print(myfunc(l1))
+output:
+[5, 6, [], 7, [], 23]
+
+=== Code Execution Successful ===
+#2nd method (using slicing technique)
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l2 = l1[:]
+    return l2
+print(myfunc(l1))
+output:
+[5, 6, [], 7, [], 23]
+
+=== Code Execution Successful ===
+#3rd method (using list comprehension)
+l1 = [5,6,[],7,[],23]
+def myfunc(l1):
+    l2 = [i for i in l1]
+    return l2
+print(myfunc(l1))
+output:
+[5, 6, [], 7, [], 23]
+
+=== Code Execution Successful ===
+
+24. Count occurrences of an element in a list
+l1 = [5,6,[],7,5,[],23,5]
+n = 5
+def myfunc(l1,n):
+    l2 = []
+    for i in l1:
+        if i == n:
+            l2.append(i)
+    return len(l2)
+print(myfunc(l1,n))
+output:
+3
+
+=== Code Execution Successful ===
+#2nd method (using single list)
+l1 = [5,6,[],7,5,[],23,5]
+n = 5
+def myfunc(l1,n):
+    count = 0
+    for i in l1:
+        if i == n:
+            count += 1
+    return count
+print(myfunc(l1,n))
+output:
+3
+
+=== Code Execution Successful ===
+#3rd method (using list comprehension)
+l1 = [5,6,[],7,5,[],23,5]
+n = 5
+def myfunc(l1,n):
+    l = [a for a in l1 if a == n]
+    return len(l)
+print(myfunc(l1,n))
+output:
+3
+
+=== Code Execution Successful ===
+#4th method (using enumerate() function)
+l1 = [5,6,[],7,5,[],23,5]
+n = 5
+def myfunc(l1,n):
+    l = [j for i,j in enumerate(l1) if j == n]
+    return len(l)
+print(myfunc(l1,n))
+output:
+3
+
+=== Code Execution Successful ===
+#5th method (using count() function)
+l1 = [5,6,[],7,5,[],23,5]
+n = 5
+def myfunc(l1,n):
+    return l1.count(n)
+print(myfunc(l1,n))
+output:
+3
+
+=== Code Execution Successful ===
+
+25. Remove empty tuples from a list
+from collections import Counter
+l1 = [('T','A'),(),(7,5),(),(23,5,10)]
+n = 5
+def myfunc(l1,n):
+    l = [i for i in l1 if i]
+    return l
+print(myfunc(l1,n))
+output:
+[('T', 'A'), (7, 5), (23, 5, 10)]
+
+=== Code Execution Successful ===
+
+
+
+
 
 
 
