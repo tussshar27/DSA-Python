@@ -1,1 +1,14 @@
+1. Python Program to Check if a String is Palindrome or Not.
+str1 = "malayalam"
+
+def myfunc(str1):
+  str2 = str1[::-1]
+  if str1 == str2:
+    return 'Yes'
+  return 'No'
+  
+print(myfunc(str1))
+output:
+Yes
+
 
