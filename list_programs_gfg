@@ -712,6 +712,17 @@ output:
 
 === Code Execution Successful ===
 
+31. Reverse a list.
+l1 = [11,22,33,44]
+
+def myfunc(l1):
+
+  l2 = l1[::-1]
+  return l2
+  
+print(myfunc(l1))
+output:
+[44, 33, 22, 11]
 
 
 
