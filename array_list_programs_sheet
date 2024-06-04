@@ -1,5 +1,5 @@
 l1 = [11,20,33,40,55]
-n = 95
+n = 75
 
 def myfunc(l1,n):
   for i in range(0,len(l1)):
@@ -11,6 +11,6 @@ def myfunc(l1,n):
   return "Please enter valid sum number."
 print(myfunc(l1,n))
 output:
-(40, 55)
+(20, 55)
 
 
