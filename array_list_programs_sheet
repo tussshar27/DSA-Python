@@ -16,6 +16,7 @@ output:
 [(11, 20), (30, 1)]
 
 2. Majority Element.
+#A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element). 
 l1 = [10,20,30,20,20,20,50,20,20,40]
 n = 10
 
