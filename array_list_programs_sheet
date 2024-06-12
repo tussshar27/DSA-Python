@@ -35,3 +35,6 @@ print(myfunc(l1,n))
 output:
 20
 
+3. Find the number occuring odd number of times.
+
+
