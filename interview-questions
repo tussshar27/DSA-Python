@@ -1,3 +1,4 @@
+STRING INTERVIEW QUESTIONS
 1. The megastore offers a deal that states any product whose price is a golden price O would be given to them for free.
 A number G is said to have a given price if the difference between the highest digit and the sum of its digits equals the highest digits python program
 start = int(input('Enter first number: '))
