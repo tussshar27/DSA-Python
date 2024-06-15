@@ -30,3 +30,31 @@ Enter last number: 50
 44
 sum of digits of golden number: 110
 
+2. Write a program to get the count of max ascii char value from a string and print the min ascii char value till the count of max ascii char value.
+str = "ninjatuurtlues"
+
+def myfunc(str):
+  s2 = ""
+  m = max(str)      
+  print(f'max char as per the ASCII: {m}')
+  s = min(str)
+  print(f'min char as per the ASCII: {s}')
+  
+  n = 0
+  for i in str:
+    # print(i,ord(i))
+    if m == i:
+      n += 1
+  print(n)
+  
+  for j in range(0,n):
+    s2 += s
+  return s2
+  
+print(myfunc(str))
+output:
+max char as per the ASCII: u
+min char as per the ASCII: a
+3
+aaa
+
