@@ -1,0 +1,32 @@
+1. The megastore offers a deal that states any product whose price is a golden price O would be given to them for free.
+A number G is said to have a given price if the difference between the highest digit and the sum of its digits equals the highest digits python program
+start = int(input('Enter first number: '))
+end = int(input('Enter last number:'))
+
+def myfunc(start,end):
+  l1 = []
+  su = 0
+  for i in range(start,end+1):
+    l1 = [int(j) for j in str(i)]      #working with string number
+
+    m = max(l1)
+    s = sum(l1)
+    # print(f'{l1}, Max:{m}, Sum:{s}')
+    
+    if s-m == m:
+      print(i)
+      su += i
+  
+  return (f'sum of digits of golden number: {su}')
+  
+  
+print(myfunc(start,end))
+output:
+Enter first number: 10
+Enter last number: 50
+11
+22
+33
+44
+sum of digits of golden number: 110
+
