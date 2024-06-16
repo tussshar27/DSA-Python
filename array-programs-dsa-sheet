@@ -56,7 +56,40 @@ print(myfunc(l1))
 output:
 3
 
+4. Merge an array of size n into another array of size m+n.
+NA = -1
+mPlusN = [2, 8, NA, NA, NA, 13, NA, 15, 20] 
+N = [5, 7, 9, 25]
 
+def myfunc(mPlusN,N):
+  # print(mPlusN)
+  k = 0
+  l1 = []
+  for i in range(0,len(mPlusN)):
+    if mPlusN[i] == -1:
+      l1.append(i)
+  for i in range(0,len(l1)):
+    n = l1[i]
+    mPlusN[n] = N[i] 
+  return mPlusN
+
+def diff(mPlusN,N):
+  count = 0
+  for i in mPlusN:
+    if i == -1:
+      count += 1
+  if count == len(N):
+    return True
+  return False
+ 
+if diff(mPlusN,N):
+  print(myfunc(mPlusN,N))
+else:
+  print("List count not matching")
+output:
+[2, 8, 5, 7, 9, 13, 25, 15, 20]
+
+5. Rotate an array.
 
 
 
