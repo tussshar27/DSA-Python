@@ -104,6 +104,8 @@ output:
 [3, 4, 5, 6, 7, 1, 2]
 
 6. Leaders in an array.
+# Write a program to print all the LEADERS in the array. 
+# An element is a leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
 l1 = [16, 17, 4, 3, 5, 2]
 
 def myfunc(l1):
