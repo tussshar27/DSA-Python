@@ -210,10 +210,12 @@ def myfunc(l1,n):
       if l1[i] == l1[j]:
         count += 1
     if count == 2:
-      l2.append(l1[i])
-  return l2
+      print((l1[i]),end=' ')
   
-print(myfunc(l1,n))
+  
+myfunc(l1,n)
 output:
-[4, 2]
+4 2
+
+11. Find the smallest missing number.
 
