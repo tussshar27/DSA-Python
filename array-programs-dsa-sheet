@@ -143,4 +143,5 @@ print(myfunc(l1))
 output:
 5 occurs more than 3 times in array.
 
+8. Segregate 0s and 1s in an array.
 
