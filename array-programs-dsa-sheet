@@ -225,6 +225,25 @@ output:
 
 12. Given an array arr[], find the maximum j – i such that arr[i] <= arr[j].
 
+13. Find Subarray with given sum | Set 1 (Non-negative Numbers).
+l1 = [1, 4, 20, 3, 10, 5]
+sum = 33
+def myfunc(l1,sum):
+  for i in range(0,len(l1)):
+    count = 0
+    for j in range(i,len(l1)):
+      if count < sum:
+        count += l1[j]
+      if count == sum:
+        print(l1[i:j+1])
+        return f'sum found between indexes {i} and {j}'
+print(myfunc(l1,sum))
+output:
+[20, 3, 10]
+sum found between indexes 2 and 4
+
+14. Find the smallest positive number missing from an unsorted array | Set 1.
+
 
 
 
