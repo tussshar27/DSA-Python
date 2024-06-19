@@ -223,3 +223,20 @@ output:
 
 11. Find the smallest missing number.
 
+12. Given an array arr[], find the maximum j – i such that arr[i] <= arr[j].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
