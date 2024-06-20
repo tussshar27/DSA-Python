@@ -266,8 +266,34 @@ myfunc(l1)
 output:
 100 5000
 
-16. 
+16. Largest subarray with equal number of 0s and 1s.
+https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/
+#NOTE: Also try using HashMap.
+l1 = [1, 0, 1, 1, 1, 0, 0]
+       # 1      to      6
 
+def myfunc(l1):
+  for i in range(0,len(l1)):
+    count = 0
+    o1 = 0
+    z1 = 0
+    
+    for j in range(i,len(l1)):
+      count += 1
+      if l1[j] == 0:
+        z1 += 1
+      if l1[j] == 1:
+        o1 += 1
+
+      if z1 == o1 and count % 2 == 0 and z1 != 1 and o1 != 1:
+        return f'subarray between index {i},{j}'
+  return 'no such subarray.'      
+  
+print(myfunc(l1))
+output:
+subarray between index 1,6
+
+17. 
 
 
 
