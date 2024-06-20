@@ -310,7 +310,31 @@ print(myfunc(l1))
 output:
 [17, 17, 16, 16, 6, 6, 2, -1]
 
-18. 
+18. Best Time to Buy and Sell Stock II (infinite transactions allowed).
+
+19. Find common elements in three sorted arrays.
+l1 = [1, 5, 5]
+l2 = [3, 4, 5, 5, 10]
+l3 = [5, 5, 10, 20]
+
+def myfync(l1,l2,l3):
+  r1 = []
+  f1 = []
+  for i in l1:
+    if i in l2:
+      r1.append(i)
+      
+  for j in r1:
+    if j in l3:
+      f1.append(j)
+  return f1
+  
+print(myfync(l1,l2,l3))
+output:
+[5, 5]
+
+19. Nuts & Bolts Problem (Lock & Key problem) using Quick Sort.
+
 
 
 
