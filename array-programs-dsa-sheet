@@ -294,8 +294,23 @@ output:
 subarray between index 1,6
 
 17. Replace every element with the greatest element on right side.
+l1 = [16, 10, 17, 4, 16, 5, 6, 2]
 
+def myfunc(l1):
+  for i in range(0,len(l1)):
+    for j in range(i+1,len(l1)):
+      if l1[i] < l1[j]:
+        l1[i] = l1[j]
+        l1[i+1] = 0
+        
+  l1[-1] = -1
+  return l1
+  
+print(myfunc(l1))
+output:
+[17, 17, 16, 16, 6, 6, 2, -1]
 
+18. 
 
 
 
