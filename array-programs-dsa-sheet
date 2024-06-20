@@ -293,7 +293,8 @@ print(myfunc(l1))
 output:
 subarray between index 1,6
 
-17. 
+17. Replace every element with the greatest element on right side.
+
 
 
 
