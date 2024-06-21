@@ -1,3 +1,12 @@
+Q. Difference between sorted() and sort() function.
+nuts = ['@', '#', '$', '%', '^', '&', ')'] 
+print(sorted(nuts))    #sorted() works directly with the output i.e with print()
+nuts.sort()            #sort() makes the list actual sort
+print(nuts)
+output:
+['#', '$', '%', '&', ')', '@', '^']
+['#', '$', '%', '&', ')', '@', '^']
+
 1. How to Add Two Numbers in Python – Easy Programs
 a = int(input("Enter 1st number: "))        #calling int() function because by default input() function generates string value from user.
 b = int(input("Enter 2nd number: "))
