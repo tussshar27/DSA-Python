@@ -208,6 +208,14 @@ else:
 finally:
   print('it will execute mandatorily')
 
+9. String
+s1 = "Think Tank"
+print(s1)
+print(type(s1))
+o/p:
+Think Tank
+<class 'str'>
+
 
 
 
