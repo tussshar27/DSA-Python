@@ -209,13 +209,148 @@ finally:
   print('it will execute mandatorily')
 
 9. String
-s1 = "Think Tank"
+s1 = 'Hello World!'
+s2 = "Think Tank"
+s3 = '''Have 
+a
+good
+day!'''
 print(s1)
+print(s2)
+print(s3)
 print(type(s1))
 o/p:
+Hello World!
 Think Tank
+Have 
+a
+good
+day!
 <class 'str'>
 
+s1 = 'Hello\t World!\n'  #\t and \n are wildcard characters used for tab space and new line.
+s2 = "Think Tank"
+o/p:
+Hello   World!  #extra line below is created due to \n wildcard character.
+
+Think Tank
+
+#Indexing
+print(s1[0])
+print(s1[-2])
+print(s1[-1])
+o/p:
+H
+l
+!
+
+#Slicing
+print("Slicing:",s1[0:5])
+print("Slicing:",s1[0:5:2])
+print("Slicing:",s1[:-1])
+print("Slicing:",s1[-6:-1])
+
+o/p:
+Slicing: Hello
+Slicing: Hlo
+Slicing: Hello World
+Slicing: World
+
+#Reverse a String
+print("Reversing a string using Slicing:",s1[::-1])
+o/p:
+Reversing a string using Slicing: !dlroW olleH
+
+#Updating a String
+1st method: A character of a string can be updated in Python by first converting the string into a Python List and then updating the element in the list. 
+As lists are mutable in nature, we can update the character and then convert the list back into the String using the Python string join() method.
+2nd method: Another method is using the string slicing method. Slice the string before the character you want to update, then add the new character and finally add the other part of the string again by string slicing.
+
+s1 = "Think Tank"
+print("before updating the string")
+print(s1)
+l1 = list(s1)
+l1[1] = 'T'
+
+s1 = ''.join(l1)        #using .join() function to convert the list to string.
+print("after updating the string")
+print(s1)
+o/p:
+before updating the string
+Think Tank
+after updating the string
+TTink Tank
+
+s1 = "Think Tank"
+print("using slicing method to update string")
+s2 = s1[0:4] + 'H' + s1[5:]
+print(s2)
+o/p:
+ThinH Tank
+
+#Updating Entire String
+SInce String is immutable. We can't update the string so we will replace the content of the variable with new string.
+s1 = "Think Tank"
+print(s1)
+s1 = "Hello World"
+print(s1)
+o/p:
+Think Tank
+Hello World
+
+#Deleting a character
+As we know that String is immutable. we can't delete any character of string. To delete any char we can perform slicing.
+s1 = "Think Tank"
+s2 = s1[0:2] + s1[4:]
+print(s2)
+o/p:
+Thk Tank
+
+del String1[2]
+print(String1)
+o/p:
+ERROR
+
+#Deleting Entire String
+We can delete the entire string using del keyword. but after that if we try to print the string then it will throw error.
+String1 = "Hello, I'm a Geek"
+del String1
+print("\nDeleting entire String: ")
+print(String1)
+o/p:
+ERROR
+
+#Escape Sequencing in Python
+Give \ to ignore ',",\ inside the string.
+s1 = "Think \"Tank"
+print(s1)
+o/p:
+Thi'nk "Tank
+
+s1 = 'Thin\'k Tank'
+print(s1)
+o/p:
+Thin'k Tank
+
+print("Without Escape Sequence")
+s1 = 'Thi\nk Tank'
+print(s1)
+print("With Escape Sequence")
+s1 = 'Thi\\nk Tank'
+print(s1)
+o/p:
+Without Escape Sequence
+Thi
+k Tank
+With Escape Sequence
+Thi\nk Tank
+
+#F-String
+a = 10
+b = 20
+print(f'First Number: {a} and Second Number: {b}')
+o/p:
+First Number: 10 and Second Number: 20
 
 
 
