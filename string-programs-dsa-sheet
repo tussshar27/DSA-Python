@@ -30,4 +30,6 @@ print(myfunc(s1,s2))
 output:
 ompuer
 
+3. Check if given strings are rotations of each other or not.
+
 
