@@ -31,5 +31,21 @@ output:
 ompuer
 
 3. Check if given strings are rotations of each other or not.
+s = "abcde"
+goal = "cdeab"
+
+class Solution(object):
+  
+    def rotateString(self, s, goal):
+      print(s in goal+goal)            #trick is to see whether the given string is present inside the goal+goal string because after rotation, it should be present inside goal+goal.
+      return len(s) == len(goal) and s in goal+goal
+            
+obj =  Solution()
+print(obj.rotateString(s,goal))
+output:
+True
+True
+
+4. 
 
 
