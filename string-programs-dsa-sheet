@@ -46,6 +46,25 @@ output:
 True
 True
 
-4.
+4. Print all permutations of given String.
 
+5. Reverse words in a given string.
+s1 = 'geeks quiz practice code'
+
+def myfunc(s1):
+  s2 = ''
+  l1 = []
+  for i in s1.split():
+    l1.append(i)
+    
+  print(l1)
+  print(l1[::-1])
+  s2 = ' '.join(l1[::-1])    
+  print(s2)
+
+print(myfunc(s1))
+output:
+['geeks', 'quiz', 'practice', 'code']
+['code', 'practice', 'quiz', 'geeks']
+code practice quiz geeks
 
