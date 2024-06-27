@@ -130,6 +130,17 @@ output:
 Anagram
 
 8. Write your own atoi() (Optional)
-9. Rearrange a string so that all same characters become d distance away.
+9. Rearrange a string so that all same characters become d distance away. (Hard)
+10. Find Excel column name from a given column number. (Hard)
+
+
+
+
+
+
+
+
+
+
 
 
