@@ -68,4 +68,28 @@ output:
 ['code', 'practice', 'quiz', 'geeks']
 code practice quiz geeks
 
-6. 
+6. Smallest window in a String containing all characters of other String.
+s1 = 'geeksforgeeks'
+      # 0123456789
+p = 'ork'
+def myfunc(s1,p):
+  l1 = []
+  s2 = ''
+  for i in range(len(s1)):
+    # print(i)
+    for j in range(len(p)):
+      # print(p[j])
+      if s1[i] == p[j] and s1[i] not in s2:
+        s2 += s1[i]
+        l1.append(i)
+        
+  a = l1[0]
+  b = l1[-1]
+  s = s1[a:b+1]
+  return s
+  
+print(myfunc(s1,p))
+output:
+ksfor
+
+7. Check whether two Strings are anagram of each other.
