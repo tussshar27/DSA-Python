@@ -107,4 +107,29 @@ print(myfunc(s1,s2))
 output:
 Anagram
 
+#without using python inbuilt functions:
+s1 = 'listen'
+s2 = 'silent'
+
+def myfunc(s1,s2):
+  flag = 0
+  for i in s2:
+    if i not in s1:
+      flag = 1
+  
+  for j in s1:
+    if j not in s2:
+      flag = 1
+      
+  if flag == 1:
+    return "Not Anagram"
+  return "Anagram"
+  
+print(myfunc(s1,s2))
+output:
+Anagram
+
+8. Write your own atoi() (Optional)
+9. Rearrange a string so that all same characters become d distance away.
+
 
