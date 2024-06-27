@@ -76,9 +76,7 @@ def myfunc(s1,p):
   l1 = []
   s2 = ''
   for i in range(len(s1)):
-    # print(i)
     for j in range(len(p)):
-      # print(p[j])
       if s1[i] == p[j] and s1[i] not in s2:
         s2 += s1[i]
         l1.append(i)
