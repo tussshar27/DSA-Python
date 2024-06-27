@@ -91,3 +91,20 @@ output:
 ksfor
 
 7. Check whether two Strings are anagram of each other.
+s1 = 'listen'
+s2 = 'silent'
+
+def myfunc(s1,s2):
+  l1 = list(s1)
+  l2 = list(s2)
+  l1.sort()
+  l2.sort()
+  if l1 == l2:
+    return "Anagram"
+  return "Not Anagram"
+    
+print(myfunc(s1,s2))
+output:
+Anagram
+
+
