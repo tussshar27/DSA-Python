@@ -87,20 +87,23 @@ output:
 Eg. arr = [1,5,8,3], target = 4. Now we have to check the sum of elements up to 4. so we will first check whether the current element (1) is less than target. If yes then do substraction (4 - 1 = 3). so now we have to find (3) is present or not. So we don't have to check every number, we just have to check whether (3) exists or not.
 In Hashmap, we will be mapping each value to the index. val:index; so 0->1, 1->5, 2->8, 3->3
 time complexity: O(N) bc we are looping just one time and inserting in dictionary which is O(1) that is ignorable and space: O(N) bc we are using hashmap so its taking extra space.
-l1 = [1, 5, 8, 3]
+l1 = [1, 5, 8, 6, 3, 10]
 target = 4
 def myfunc(l1,target):
-  prevHash = {}
+  prevHash = {}    #to store iterated values from left
   for index,value in enumerate(l1):
     # print(index,value)
-    diff = target - value
-    if diff in prevHash:
-      return(prevHash[diff],index)
-    prevHash[value] = index
-    
+    diff = target - value     # 3 = 4 - 1
+    if diff in prevHash:      
+      print(prevHash[diff],index)  
+    prevHash[value] = index   #prevHash[1] = 0
+  print(prevHash)
 print(myfunc(l1,target))
 output:
-[0,1]
+0 4
+{1: 0, 5: 1, 8: 2, 6: 3, 3: 4, 10: 5}
+
+
 
 
 
