@@ -321,6 +321,40 @@ o/p:
 2 20
 3 30
 
+defaultdict in python:
+Certainly! In Python, a defaultdict is a container defined in the collections module. It is a subclass of the built-in dict class and provides a default value for keys that do not exist. Unlike a regular dictionary, which raises a KeyError when accessing a non-existent key, a defaultdict automatically creates a new key with the specified default value if it is not found.
+from collections import defaultdict
+#using defaultdict with list. If unrecognised key is called then by default empty list is created automatically because list is passed as a parameter to defaultdict.
+# d1 = {}
+d1 = defaultdict(list)
+
+d1['a'] = 10
+d1['b'] = 20
+d1['c'] = 30
+
+print(d1['a'])
+print(d1['e'])
+output:
+10
+[]
+
+#using default method
+def not_present():
+  return 'Not Present'
+
+d2 = defaultdict(not_present)    #NOTE: There is no () while calling a function in a parameter.
+
+d2[1] = 11
+d2[2] = 22
+d2[3] = 33
+
+print(d2[1])
+print(d2[4])
+output:
+11
+Not Present
+
+
 
 
 #HashSet
