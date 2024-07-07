@@ -61,7 +61,13 @@ True
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+
 #using bruteforce
+we will compare each element with its all right elements. Time Complexity: O(Nsquare). since we are running two nested loops.
+
 def twoSum(nums, target):
     l1 = []
     for i in range(len(nums)):
@@ -77,17 +83,22 @@ twoSum([-1,-2,-3,-4,-5],8)
 output:
 [2, 4]
 
-=== Code Execution Successful ===
-#using hashmap time: O(N) bc we are looping just one time and inserting in dictionary which is O(1) that is ignorable and space: O(N) bc we are using hashmap so its taking extra space.
-class Solution:
-    # eg list: [2,7,11,15], target: 9
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hm = {}     #created hashmap to store each iterated value of list
-        for k,v in enumerate(nums):     #key,value
-            d = target - v          #difference of target and value
-            if d in hm:             #if difference is present in hashmap
-                return [hm[d],k]    #print index of difference, and key
-            hm[v] = k   #eg 2:0
+#using hashmap
+Eg. arr = [1,5,8,3], target = 4. Now we have to check the sum of elements up to 4. so we will first check whether the current element (1) is less than target. If yes then do substraction (4 - 1 = 3). so now we have to find (3) is present or not. So we don't have to check every number, we just have to check whether (3) exists or not.
+In Hashmap, we will be mapping each value to the index. val:index; so 0->1, 1->5, 2->8, 3->3
+time complexity: O(N) bc we are looping just one time and inserting in dictionary which is O(1) that is ignorable and space: O(N) bc we are using hashmap so its taking extra space.
+l1 = [1, 5, 8, 3]
+target = 4
+def myfunc(l1,target):
+  prevHash = {}
+  for index,value in enumerate(l1):
+    # print(index,value)
+    diff = target - value
+    if diff in prevHash:
+      return(prevHash[diff],index)
+    prevHash[value] = index
+    
+print(myfunc(l1,target))
 output:
 [0,1]
 
