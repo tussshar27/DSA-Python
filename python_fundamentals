@@ -138,6 +138,8 @@ o/p:
 nums = [1,2,3]
 nums.reverse()
 print(nums)
+OR
+print(nums[::-1])
 o/p:
 [3, 2, 1]
 #Sorting array
