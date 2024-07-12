@@ -41,11 +41,11 @@ print(3/2)                    #1.5
 import array as arr
 a1 = arr.array(i,[1,2,3,4])			#i means integer
 a1.append(10)
-a1.extend(20,30,40)
+a1.extend([20,30,40])
 a1.insert(0,50)
 print(a1)
 o/p:
-array(i,[1,2,3,4,10,20,30,40])
+array(i,[50, 1, 2, 3, 4, 10, 20, 30, 40])
 
 #numpy package is used to create multidimensional array
 import numpy as np
