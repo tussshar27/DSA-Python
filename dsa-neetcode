@@ -103,7 +103,7 @@ output:
 0 4
 {1: 0, 5: 1, 8: 2, 6: 3, 3: 4, 10: 5}
 
-3. Group Anagram
+4. Group Anagram
 from collections import defaultdict
 from typing import List
 class Solution:
