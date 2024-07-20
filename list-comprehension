@@ -30,7 +30,7 @@ print(lb3)
 str = "HelloMyNameIsTushar"
 
 #to club each char together, join with empty string
-# NOTE: whenever we us list comprehension with string then we have to use .join() with empty string.
+# NOTE: whenever we us list comprehension with string then we have to use .join() with empty string in order to club all chars together.
 str3 = "".join([i for i in str])
 print(str3)
 
@@ -44,6 +44,12 @@ print(str5.lstrip())
 
 str6 = "".join([i if i.islower() else " " + i for i in str]).lstrip(' ')
 print(str6)
+
+#we cannot use elif keyword in between if and else statement inside list comprehension but we can use else keyword:
+syntax: if else action condition else
+
+str7 = "".join([i if i.islower() else " " + i.lower() if i in ['N','I'] else " " + i for i in str]).lstrip(' ')
+print(str7)
 
 
 
