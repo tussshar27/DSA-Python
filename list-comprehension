@@ -1,3 +1,60 @@
+#List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+#Basic
+l1 = ['tushar','annam']
+
+ls = []
+for i in l1:
+  ls.append(i.upper())
+print(ls)
+
+l2 = [i.upper() for i in l1]
+print(l2)
+
+# ----------------------------------
+# Boolean - True/False, 0/1, on/off
+lb = [True, False, True, True, False, True]
+lb2 = []
+for i in lb:
+  if i == True:
+    lb2.append(1)
+  else:
+    lb2.append(0)
+    
+print(lb2)
+
+lb3 = [1 if i == True else 0 for i in lb] #compare it with above code
+print(lb3)
+
+# ----------------------------------
+#String Manipulation
+str = "HelloMyNameIsTushar"
+
+#to club each char together, join with empty string
+# NOTE: whenever we us list comprehension with string then we have to use .join() with empty string.
+str3 = "".join([i for i in str])
+print(str3)
+
+str5 = ""
+for i in str:
+  if i.islower():
+    str5 += i
+  else:
+    str5 = str5 + ' ' + i
+print(str5.lstrip())
+
+str6 = "".join([i if i.islower() else " " + i for i in str]).lstrip(' ')
+print(str6)
+
+
+
+
+##################################################################################################################
+
+
+
+
+
+
 list1 = [i if i % 2 == 0 else 0 for i in range(1, 11)]
 ls2 = [i for i in range(1,16) if i%2==0]
 print(ls2)
