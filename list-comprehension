@@ -1,0 +1,40 @@
+list1 = [i if i % 2 == 0 else 0 for i in range(1, 11)]
+ls2 = [i for i in range(1,16) if i%2==0]
+print(ls2)
+print("list1: ")
+print(list1)
+
+list2 = []
+for i in range(1,11):
+  if i%2==0:
+    list2.append(i)
+  else:
+    list2.append(0)
+print("list2: ")
+print(list2)
+
+print("---------------------------------")
+# Identify columns with camel case names
+ls = ["firstName","lastName","age","department","ABCD"]
+
+# ccc = [col_name for col_name in df if any(c.isupper() for c in col_name)]
+ccc = [i for i in ls if any(j.isupper() for j in i)]
+print("using list comprehension:")
+print(ccc)
+
+list3 = []
+for i in ls:
+  for j in i:
+    if j.isupper():
+      list3.append(i)
+      break
+print("without using list comprehension:")
+print(list3)
+
+
+
+list1 = ["Not char" if not i.isalpha() else "Harsha" if i=="H" else "Krishna" for i in "H/K"]
+
+print("Using the multiple if/else in List comprehension")
+
+print(list1)
