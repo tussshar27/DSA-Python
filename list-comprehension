@@ -75,7 +75,7 @@ def camel_to_snake(name):
     return ''.join(['_' + c.upper() if c.isupper() else c for c in name]).lstrip('_')    #NOTE: '_' + c.upper() both together is a one single expression of if condition.
 
 # Identify columns with camel case names
-camel_case_columns = [col_name for col_name in df.columns if any(c.isupper() for c in col_name)]
+camel_case_columns = [col_name for col_name in df.columns if any(c.isupper() for c in col_name)]  #NOTE: here is we put if condition before for loop then we have to mandatorily give else condition otherwise it will throw syntax error.
 
 # Rename columns
 for col_name in camel_case_columns:
