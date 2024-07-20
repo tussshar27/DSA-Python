@@ -56,48 +56,34 @@ print(str7)
 
 ##################################################################################################################
 
+# !pip install pyspark
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
 
+# Create a Spark session
+spark = SparkSession.builder.appName("CamelToSnakeCase").getOrCreate()
 
+# Sample data (replace with your actual data)
+data = [("Alice","Ford", 25), ("Bob","Cruise", 30), ("Carol","Reacher", 28)]
+columns = ["FirstName", "LastName","age"]  # Example camel case column names
 
+# Create a DataFrame
+df = spark.createDataFrame(data, columns)
 
+# Function to convert camel case to snake case
+def camel_to_snake(name):
+    return ''.join(['_' + c.upper() if c.isupper() else c for c in name]).lstrip('_')    #NOTE: '_' + c.upper() both together is a one single expression of if condition.
 
-list1 = [i if i % 2 == 0 else 0 for i in range(1, 11)]
-ls2 = [i for i in range(1,16) if i%2==0]
-print(ls2)
-print("list1: ")
-print(list1)
-
-list2 = []
-for i in range(1,11):
-  if i%2==0:
-    list2.append(i)
-  else:
-    list2.append(0)
-print("list2: ")
-print(list2)
-
-print("---------------------------------")
 # Identify columns with camel case names
-ls = ["firstName","lastName","age","department","ABCD"]
+camel_case_columns = [col_name for col_name in df.columns if any(c.isupper() for c in col_name)]
 
-# ccc = [col_name for col_name in df if any(c.isupper() for c in col_name)]
-ccc = [i for i in ls if any(j.isupper() for j in i)]
-print("using list comprehension:")
-print(ccc)
+# Rename columns
+for col_name in camel_case_columns:
+    new_col_name = camel_to_snake(col_name)
+    df = df.withColumnRenamed(col_name, new_col_name)
 
-list3 = []
-for i in ls:
-  for j in i:
-    if j.isupper():
-      list3.append(i)
-      break
-print("without using list comprehension:")
-print(list3)
+# Show the result
+df.show()
 
-
-
-list1 = ["Not char" if not i.isalpha() else "Harsha" if i=="H" else "Krishna" for i in "H/K"]
-
-print("Using the multiple if/else in List comprehension")
-
-print(list1)
+# Stop the Spark session
+spark.stop()
