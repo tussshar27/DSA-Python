@@ -22,7 +22,7 @@ O(Nsquare) Quadratic Time Complexity: It is based on nested loop.
 Example: For loop running for N times inside a outer For loop which is aso runnig for N times. So the time complexity becomes O(Nsqaure), traversing through all the cells of matrics (n * n = nsquare).
 when the input size increases then the time it takes also increases which is more than O(N).
 
-O(logN): O(LogN) has better time complexity then O(N) linear time complexity.
+O(logN): O(LogN) is in between of O(1) and O(N) and it is next to O(1). O(LogN) has better time complexity then O(N) linear time complexity.
 Example: Binary Search Algorithm
 In Binary search, the input size of an array is split into half each time to search an element.
 Suppose array size = 100, so it will split to 50-50, then again it will split to 25-25, till it comes to 1.
