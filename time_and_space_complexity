@@ -2,8 +2,8 @@ Big O notation: It gives the worst case of the algorithm. Also, it helps in comp
 NOTE: whenever there are multiple time complexities present in our code then we have to ignore small complexity and always have to choose largest complexity
 Example: 
 In a single code there are,
-loop O(N)
 print O(1)
+loop O(N)
 Consider:
 loop O(N)
 
