@@ -18,7 +18,11 @@ O(N) Linear/Linear Time Complexity: when input size increases then the time take
 Mathematically on scale, it is x = y.
 Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performinglinear search.
 
-O(1) > O(N) > 
+O(Nsquare) Quadratic Time Complexity: It is based on nested loop.
+Example: For loop running for N times inside a outer For loop which is aso runnig for N times. So the time complexity becomes O(Nsqaure), traversing through all the cells of matrics (n * n = nsquare).
+when the input size increases then the time it takes also increases which is more than O(N).
+
+O(1) > O(N) > O(Nsquare) 
 
 
 
