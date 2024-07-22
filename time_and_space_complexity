@@ -14,15 +14,31 @@ To calculate Time complexity:
 O(1) Constant Time Complexity: whatever the input size, the time taken to process the algorithm will be constant.
 Example: print statement inside a function, accessing an array with index arr[2]
 
-O(N) Linear/Linear Time Complexity: when input size increases then the time taken to process also increases linearly. 
+O(N) Linear/Linear Search Time Complexity: when input size increases then the time taken to process also increases linearly. 
 Mathematically on scale, it is x = y.
-Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performinglinear search.
+Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performing linear search.
 
 O(Nsquare) Quadratic Time Complexity: It is based on nested loop.
 Example: For loop running for N times inside a outer For loop which is aso runnig for N times. So the time complexity becomes O(Nsqaure), traversing through all the cells of matrics (n * n = nsquare).
 when the input size increases then the time it takes also increases which is more than O(N).
 
-O(1) > O(N) > O(Nsquare) 
+O(logN): O(LogN) has better time complexity then O(N) linear time complexity.
+Example: Binary Search Algorithm
+In Binary search, the input size of an array is split into half each time to search an element.
+Suppose array size = 100, so it will split to 50-50, then again it will split to 25-25, till it comes to 1.
+Now consider reverse of above operation till our array size i.e. double of input size starting from 1 until 100.
+1 -> 1*2 -> 2*2 -> 4*2 -> 25*2 -> 50*2 -> until 100
+from above calculation,
+1 * 2power(x) = 100
+2power(x) = 100
+x = logbase2(100)
+x = log(N)
+x = logN
+Here, x = No. of operations
+Therefore, No. of operations = logN.
+
+
+O(1) > O(logN) > O(N) > O(Nsquare) 
 
 
 
