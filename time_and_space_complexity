@@ -1,8 +1,11 @@
 Big O notation: It gives the worst case of the algorithm. Also, it helps in comparing the efficiency of different algorithms and understanding their scalability with large inputs.
 NOTE: whenever there are multiple time complexities present in our code then we have to ignore small complexity and always have to choose largest complexity
-Example: In code there are,
+Example: 
+In a single code there are,
 loop O(N)
 print O(1)
+Consider:
+loop O(N)
 
 To calculate Time complexity:
 1. Ignore constant.
