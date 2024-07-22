@@ -37,6 +37,9 @@ x = logN
 Here, x = No. of operations
 Therefore, No. of operations = logN.
 
+O(NlonN):
+Example: All Sorting Algorithms
+
 
 O(1) > O(logN) > O(N) > O(Nsquare) 
 
