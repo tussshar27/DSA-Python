@@ -2,8 +2,8 @@ Big O notation: It gives the worst case of the algorithm. Also, it helps in comp
 NOTE: whenever there are multiple time complexities present in our code then we have to ignore small complexity and always have to choose largest complexity
 Example: 
 In a single code there are,
-print O(1)
-loop O(N)
+print O(1) - assume we have 1 row or  1 billion rows as an input then it will take same constant time to run for both.
+loop O(N)  - if the input size is of 1 billion rows then it will also take same time to process it linearly.
 Consider:
 loop O(N)
 
@@ -18,7 +18,7 @@ O(N) Linear/Linear Time Complexity: when input size increases then the time take
 Mathematically on scale, it is x = y.
 Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performinglinear search.
 
-
+O(1) > O(N) > 
 
 
 
