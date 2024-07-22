@@ -1,4 +1,9 @@
 Big O notation: It gives the worst case of the algorithm. Also, it helps in comparing the efficiency of different algorithms and understanding their scalability with large inputs.
+NOTE: whenever there are multiple time complexities present in our code then we have to ignore small complexity and always have to choose largest complexity
+Example: In code there are,
+loop O(N)
+print O(1)
+
 To calculate Time complexity:
 1. Ignore constant.
 2. Take only the highest value as a worst case.
@@ -9,6 +14,7 @@ Example: print statement inside a function, accessing an array with index arr[2]
 O(N) Linear/Linear Time Complexity: when input size increases then the time taken to process also increases linearly. 
 Mathematically on scale, it is x = y.
 Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performinglinear search.
+
 
 
 
