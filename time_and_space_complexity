@@ -6,9 +6,10 @@ To calculate Time complexity:
 O(1) Constant Time Complexity: whatever the input size, the time taken to process the algorithm will be constant.
 Example: print statement inside a function, accessing an array with index arr[2]
 
-O(N) Linear/Linar Time Complexity: when input size increases then the time taken to process also increases linearly. 
+O(N) Linear/Linear Time Complexity: when input size increases then the time taken to process also increases linearly. 
 Mathematically on scale, it is x = y.
-Example: using loop to print all the elements of an array or all the chars of a string.
+Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performinglinear search.
+
 
 
 
