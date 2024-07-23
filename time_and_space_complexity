@@ -52,6 +52,9 @@ Suppose N = 4 then N! factorial = 4 * 3 * 2 * 1 = 26
 As per the above calculations for O(2powerN) and O(N!), we  can see that the value for O(N!) is bigger than the value for O(2powerN).
 So, O(N!) has the worst time complexity than O(2powerN).
 
+Problem Solving Time Limit:
+Best case: 1sec runtime 
+
 O(1) < O(logN) < O(N) < O(Nsquare) < O(N!)
 
 
