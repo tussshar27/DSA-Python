@@ -18,8 +18,8 @@ O(N) Linear/Linear Search Time Complexity: when input size increases then the ti
 Mathematically on scale, it is x = y.
 Example: using loop to print all the elements of an array or all the chars of a string, when we search all the elements of an array using index then we are performing linear search.
 
-O(Nsquare) Quadratic Time Complexity: It is based on nested loop.
-Example: For loop running for N times inside a outer For loop which is aso runnig for N times. So the time complexity becomes O(Nsqaure), traversing through all the cells of matrics (n * n = nsquare).
+O(N^2) Quadratic Time Complexity: It is based on nested loop.
+Example: For loop running for N times inside a outer For loop which is aso runnig for N times. So the time complexity becomes O(N^2), traversing through all the cells of matrics (n * n = nsquare).
 when the input size increases then the time it takes also increases which is more than O(N).
 
 O(logN): O(LogN) is in between of O(1) and O(N) and it is next to O(1). O(LogN) has better time complexity then O(N) linear time complexity.
@@ -61,11 +61,11 @@ O(1) < O(logN) < O(N) < O(NlogN) < O(N^2) < O(N^3) < O(N^4) < O(N!)
 
 
 Constraints mentioned in Problem:
-N > 10^8 - O(logN) - Binary Search OR O(1)
-N <= 10^8 - O(N)
+N > 10^8 - O(logN) - Binary Search OR O(1) constant expected
+N <= 10^8 - O(N)  - single iteration expected
 N <= 10^6 - O(NlogN)
-N <= 10^4 - O(N^2)
+N <= 10^4 - O(N^2) - nested loop
 N <= 500 - O(N^3)
-N <= 25 - O(2^N) - To use Brute Force or Recursion
-N <= 12 - O(N!)
+N <= 25 - O(2^N) - Brute Force or Recursion expected
+N <= 12 - O(N!) - Mostly it is used in Permutation
 
