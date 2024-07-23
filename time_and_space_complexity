@@ -40,13 +40,14 @@ Therefore, No. of operations = logN.
 O(NlonN):
 Example: All Sorting Algorithms
 
-O(2powerN) or O(3powerN) or O(4powerN) Exponential Time Complexity: It has one of the worst and highest time complexity. Due to its highest time complexity so we use Dynamic Programming to make it better.
+O(2^N) or O(3powerN) or O(4powerN) Exponential Time Complexity: It has one of the worst and highest time complexity. Due to its highest time complexity so we use Dynamic Programming to make it better.
 By using Dynamic Programming, we try to bring time complexity to O(Nsquare) or till O(N).
 Example: Recursion, Bruteforce
 Suppose N = 4 then 2power4 = 2 * 2 * 2 * 2 = 16
 
 O(N!) N Factorial Time Complexity: It is the worst time complexity. It is worsse than O(2powerN) Exponential Time Complexity.
-Example: Suppose N = 4 then N! factorial = 4 * 3 * 2 * 1 = 26
+Example:  Calculation of Permutation.
+Suppose N = 4 then N! factorial = 4 * 3 * 2 * 1 = 26
 
 As per the above calculations for O(2powerN) and O(N!), we  can see that the value for O(N!) is bigger than the value for O(2powerN).
 So, O(N!) has the worst time complexity than O(2powerN).
