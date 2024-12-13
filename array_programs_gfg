@@ -1,4 +1,10 @@
 NOTE: while accessing array or string through for...in loop, always start with index 0 since we have to access the array itself. eg, for i in range(0,len(arr))
+
+.sort() and sorted():
+l1 [3,1,6,5,2]
+l1.sort()    #will do sorting in place
+l2 = sorted(l1)    #will assign sorted values of a list to a new list
+
 1. Python Program to Find Sum of Array.
 # using global variable to access variable present outside the function
 arr = {1,2,3}
