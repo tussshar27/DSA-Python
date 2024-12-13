@@ -1,4 +1,4 @@
-NOTE: while accessing array or string through for...in loop, always start with index 0 since we have to access the array itself. eg, for i in range(0,len(arr)):
+NOTE: while accessing array or string through for...in loop, always start with index 0 since we have to access the array itself. eg, for i in range(0,len(arr))
 1. Python Program to Find Sum of Array.
 # using global variable to access variable present outside the function
 arr = {1,2,3}
