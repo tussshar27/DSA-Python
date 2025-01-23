@@ -215,8 +215,18 @@ ASCII value of character a is 97
 
 === Code Execution Successful ===
 
-
-
+12. Addition of elements of a list
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+l1 = [10,20,30,40,50]
+def addition(l1):
+    a = 0
+    for i in l1:
+        a = i + a
+    return a
+print(addition(l1))
+output:
+150
 
 
 
