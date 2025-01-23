@@ -27,16 +27,18 @@ a = int(input("Enter 1st number: "))
 b = int(input("Enter 2st number: "))
 
 def maximum(a,b):
-    if a>b:
-        print(f'{a} is greater than {b}')
+   if a > b:
+        print(f'{a} is bigger than {b}')
+    elif b > a:
+        print(f'{b} is bigger than {a}')
     else:
-        print(f'{b} is greater than {a}')
+        print(f'{a} and {b} both are same')
         
 maximum(a,b)
 output:
 Enter 1st number: 10
 Enter 2st number: 20
-20 is greater than 10
+20 is bigger than 10
 
 === Code Execution Successful ===
 
