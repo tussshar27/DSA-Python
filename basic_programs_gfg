@@ -204,20 +204,23 @@ False
 
 10. Python Program to Print the Fibonacci sequence.
 #Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
-n = int(input("Enter number: "))
-i = 0
-j = 1
-a = 0
-l = [0,1]
-while a < n:
-    a = i + j
-    i = j
-    j = a
-    l.append(a)
-print(l)
+def fibonacci(n):
+    a = 0
+    b = 1
+    l1 = [0,1]
+    m = 0
+    
+    while m < n:
+        m = a + b
+        a = b
+        b = m
+        l1.append(m)
+        
+    return l1
+    
+print(fibonacci(10))
 output:
-Enter number: 100
-[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+[0, 1, 1, 2, 3, 5, 8, 13]
 
 === Code Execution Successful ===
 
