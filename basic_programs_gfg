@@ -67,13 +67,14 @@ output:
 === Code Execution Successful ===
 
 3.Python Program to Find the Factorial of a Number.
-a=5
-ft=1
-while a>=1:
-    ft = ft*a
-    a-=1
+def factorial(n):
+    a = 1
     
-print(ft)
+    while n > 1:
+        a = n * a
+        n = n -1
+    return a
+print(factorial(5))
 output:
 120
 
