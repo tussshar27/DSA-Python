@@ -133,6 +133,21 @@ Anagram
 9. Rearrange a string so that all same characters become d distance away. (Hard)
 10. Find Excel column name from a given column number. (Hard)
 
+11. reverse words of a string.
+s = 'this is my world'
+def rev_str(s):
+    a1 = []
+    a2 = []
+    a1 = s.split(' ')
+    for i in range(len(a1),0,-1):
+        a2.append(a1[i-1])
+    
+    return ' '.join(a2)
+print(rev_str(s))
+output:
+world my is this
+
+=== Code Execution Successful ===
 
 
 
